@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="logincss.css">
+    <link rel="stylesheet" href="gallerPagecss.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cors/2.8.5/cors.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title>Employee Gallery</title>
+</head>
+<body>
+    <section>
+            <div class="heading">
+            <h1>WELCOME TO EMPLOYEE GALLERY</h1>
+        </div>
+        <button onclick="logout()" style="float: right;">Logout</button>
+        <div class="employee-gallery">
+            <h4>Name:</h4>
+            <script>
+                document.write(localStorage.getItem("name"))
+            </script>
+        </div>
+
+        <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper" id="employee-container">
+               
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+         <script src="gallerPage.js"></script>
+        <script src="index.js"></script> 
+    </section>
+    <script>
+        function logout()
+        {
+            localStorage.removeItem("name");
+            localStorage.removeItem("email");
+           window.location.href="login.html";
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</body>
+</html>
